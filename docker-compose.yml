@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+
+  
+  ros2_mod1:
+ 
+    build:
+      context: ./ros_demo_module1
+      dockerfile: ./ros_demo_module1/Dockerfile
+    image: demo_env1:latest
+    container_name: mod1
+    # network_mode: "host"
+    privileged: true
+    volumes:
+      - ./ros_demo_module1/src:/root/ros2_ws/src
+    tty: true
+    environment:
+      - DISPLAY
+      - ROS_DOMAIN_ID=42
+    networks:
+      - custom_network
+    # entrypoint: ["tail", "-f", "/dev/null"]
+
+  ros2_mod2:
+ 
+    build:
+      context: ./ros_demo_module2
+      dockerfile: ./ros_demo_module2/Dockerfile
+    image: demo_env2:latest
+    container_name: mod2
+    # network_mode: "host"
+    privileged: true
+    volumes:
+      - ./ros_demo_module2/src:/root/ros2_ws/src
+    tty: true
+    environment:
+      - DISPLAY
+      - ROS_DOMAIN_ID=42
+    networks:
+      - custom_network
+    # entrypoint: ["tail", "-f", "/dev/null"]
+
+networks:
+  custom_network:
+    driver: bridge
