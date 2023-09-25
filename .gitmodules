@@ -1,6 +1,6 @@
 [submodule "ros_demo_module1"]
 	path = ros_demo_module1
-	url = git@github.com:KevS272/ros_demo_module1.git
+	url = https://github.com/KevS272/ros_demo_module1.git
 [submodule "ros_demo_module2"]
 	path = ros_demo_module2
-	url = git@github.com:KevS272/ros_demo_module2.git
+	url = https://github.com/KevS272/ros_demo_module2.git
