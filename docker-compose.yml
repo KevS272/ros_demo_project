@@ -4,8 +4,8 @@ services:
   ros2_mod1:
  
     build:
-      context: ./ros_demo_module1
-      dockerfile: ./ros_demo_module1/Dockerfile
+      context: ./ros_demo_module1/docker
+      dockerfile: Dockerfile
     image: demo_env1:latest
     container_name: mod1
     privileged: true
@@ -24,8 +24,8 @@ services:
   ros2_mod2:
  
     build:
-      context: ./ros_demo_module2
-      dockerfile: ./ros_demo_module2/Dockerfile
+      context: ./ros_demo_module2/docker
+      dockerfile: Dockerfile
     image: demo_env2:latest
     container_name: mod2
     privileged: true
