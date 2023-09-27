@@ -35,7 +35,7 @@ Go to the [Foxglove website](https://foxglove.dev/download) and follow the instr
 ### 4. RECOMMENDED: Open Foxglove and connect to the websocket:
 Click on `Open connection` and choose `Foxglove WebSocket`. In the websocket URL field, paste the following URL, which is the one from the module1 container:
 ```
-ws://172.69.0.2:8765
+ws://localhost:8765
 ```
 After that, click on open.
 
