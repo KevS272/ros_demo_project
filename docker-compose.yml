@@ -18,6 +18,9 @@ services:
     networks:
       ros_demo_network:
         ipv4_address: 172.69.0.2
+    ports:
+      - "8765:8765"
+          
     # UNCOMMENT ENTRYPOINT IF: you don't want the ROS packages launch automatically at container startup
     # entrypoint: ["tail", "-f", "/dev/null"]
 
